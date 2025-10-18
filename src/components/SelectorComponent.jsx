@@ -7,6 +7,7 @@ import Select from "@mui/material/Select";
 export default function SelectComponent() {
   const [age, setAge] = React.useState("");
 
+  // handleChange
   const handleChange = (event) => {
     setAge(event.target.value);
   };
