@@ -10,6 +10,7 @@ export default function SelectComponent() {
   // handleChange
   const handleChange = (event) => {
     setAge(event.target.value);
+    console.log(event.target.value);
   };
 
   return (
