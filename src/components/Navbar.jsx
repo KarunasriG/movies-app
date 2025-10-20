@@ -11,6 +11,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import SelectComponent from "./SelectorComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchValue } from "../slice/movieSlice";
+import { getMoviesBySearch } from "../api/movies";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -57,7 +58,8 @@ export default function Navbar() {
   const { searchValue } = useSelector((state) => state.movies);
   const onSearchChange = (e) => {
     console.log(e.target.value);
-    dispatch(setSearchValue(e.target.value));
+
+    dispatch(getMoviesBySearch(e.target.value));
   };
 
   return (
